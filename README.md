@@ -412,7 +412,7 @@ aws ec2 authorize-security-group-ingress \
   --protocol tcp \
   --port 80 \
   --cidr 0.0.0.0/0
-echo "✅ Security Group Created: $SG_ID_1"
+echo "✅ Jenkins Server Security Group Created: $SG_ID_1"
 
 # Security Group for Nexus Server
 SG_ID_2=$(aws ec2 create-security-group \
@@ -439,7 +439,7 @@ aws ec2 authorize-security-group-ingress \
   --protocol tcp \
   --port 80 \
   --cidr 0.0.0.0/0
-echo "✅ Security Group Created: $SG_ID_1"
+echo "✅ Nexus Server Security Group Created: $SG_ID_2"
 
 # Security Group for SonarQube Server
 SG_ID_3=$(aws ec2 create-security-group \
@@ -466,7 +466,7 @@ aws ec2 authorize-security-group-ingress \
   --protocol tcp \
   --port 80 \
   --cidr 0.0.0.0/0
-echo "✅ Security Group Created: $SG_ID_1"
+echo "✅ SonarQube Server Security Group Created: $SG_ID_3"
 
 ```
 
