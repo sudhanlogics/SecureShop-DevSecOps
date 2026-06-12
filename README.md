@@ -996,7 +996,9 @@ docker volume create sonar_db
 ```
 ### 🐘 Run PostgreSQL (Persistent Database Container)
 ```bash
-docker run -d --name sonar-db --network sonar-network \
+docker run -d --name sonar-db \
+  --user 1000:1000 \
+  --network sonar-network \
   -e POSTGRES_USER=sonar \
   -e POSTGRES_PASSWORD=sonar \
   -e POSTGRES_DB=sonar \
@@ -1009,7 +1011,7 @@ docker run -d --name sonar-db --network sonar-network \
 docker run -d --name sonar \
   --restart unless-stopped \
   -p 9000:9000 \
-  --user root \
+  --user 1000:1000  \
   --network sonar-network \
   -e SONAR_JDBC_URL=jdbc:postgresql://sonar-db:5432/sonar \
   -e SONAR_JDBC_USERNAME=sonar \
