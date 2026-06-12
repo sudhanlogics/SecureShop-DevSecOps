@@ -802,8 +802,8 @@ ssh -i "$KEY_NAME.pem" ubuntu@$NEXUS_IP
 
 ```bash
 # Variables
-$NEXUS_IP = "YOUR_NEXUS_PUBLIC_IP"
-$KEY_NAME = "Jenkins-key"
+NEXUS_IP="18.60.40.29"
+KEY_NAME="DeoriginLabs"
 
 # Navigate to PEM file location
 cd ~/Downloads   # or the directory where you saved the PEM file
@@ -922,8 +922,8 @@ ssh -i "$KEY_NAME.pem" ubuntu@$SONARQUBE_IP
 
 ```bash
 # Variables
-$SONARQUBE_IP = "YOUR_SONARQUBE_PUBLIC_IP"
-$KEY_NAME = "Jenkins-key"
+SONARQUBE_IP="18.60.154.43"
+KEY_NAME="DeoriginLabs"
 
 # Navigate to PEM file location
 cd ~/Downloads   # or the directory where you saved the PEM file
